@@ -1,0 +1,199 @@
+body {
+  margin: 0 auto;
+}
+body .main {
+  height: 275vh;
+  width: 100vw;
+  background-color: #FEECE2;
+}
+body .main .header {
+  height: 5%;
+  width: 100vw;
+  background-color: #fcccae;
+}
+body .main .mainSq {
+  height: 250vh;
+  width: 60vw;
+  background-color: #f2d4c2;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10pt;
+}
+body .main .mainSq .top {
+  height: 50vh;
+  width: 55vw;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+}
+body .main .mainSq .top .left {
+  height: 100%;
+  width: 40%;
+  background-color: #010100;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 10pt;
+}
+body .main .mainSq .top .right {
+  height: 100%;
+  width: 60%;
+  background-color: #E2BFB3;
+  margin-top: 20px;
+  border-radius: 10pt;
+}
+body .main .mainSq .top .right .nameP {
+  margin-top: 40px;
+  font-size: 12pt;
+  margin-left: 10px;
+}
+body .main .mainSq .top .right .futureP {
+  font-size: 9pt;
+  margin-left: 10px;
+}
+body .main .mainSq .middle {
+  height: 33%;
+  width: 92%;
+  margin: auto;
+  background-color: #E2BFB3;
+  margin-top: 30px;
+  border-radius: 10pt;
+}
+body .main .mainSq .middle *,
+body .main .mainSq .middle *::before,
+body .main .mainSq .middle *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body .main .mainSq .middle body {
+  font: normal 16px/1.5 "Titillium Web", sans-serif;
+  background: linear-gradient(54deg, #9164ff, #8bfff4);
+  color: #3c3f64;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+body .main .mainSq .middle .timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 0px;
+  background: #fff;
+}
+body .main .mainSq .middle .timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #eee;
+}
+body .main .mainSq .middle .timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 200px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 4px 13px 30px 1px rgba(241, 109, 109, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+body .main .mainSq .middle .timeline ul li div time {
+  position: absolute;
+  background: #FEECE2;
+  border: #FFBE98 1pt solid;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+body .main .mainSq .middle .timeline ul li div div {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .main .mainSq .middle .timeline ul li div div p {
+  text-align: center;
+}
+body .main .mainSq .middle .timeline ul li div .discovery {
+  margin-right: 10px;
+}
+body .main .mainSq .middle .timeline ul li div .discovery h1 {
+  font-size: 10pt;
+}
+body .main .mainSq .middle .timeline ul li div .discovery p {
+  font-size: 8pt;
+}
+body .main .mainSq .middle .timeline ul li:nth-of-type(odd) > div {
+  left: 35px;
+}
+body .main .mainSq .middle .timeline ul li:nth-of-type(even) > div {
+  left: -235px;
+}
+body .main .mainSq .middle .timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+body .main .mainSq .middle .timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+body .main .mainSq .middle .timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+body .main .mainSq .middle .timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width: 900px) {
+  body .main .mainSq .middle .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  body .main .mainSq .middle .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  body .main .mainSq .middle .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .main .mainSq .middle body {
+    background: #8bfff4;
+  }
+  body .main .mainSq .middle .timeline ul li {
+    margin-left: 20px;
+  }
+  body .main .mainSq .middle .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  body .main .mainSq .middle .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+body .main .mainSq .down {
+  height: 42%;
+  width: 92%;
+  background-color: #E2BFB3;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10pt;
+}
+body .main .footer {
+  height: 5%;
+  width: 100vw;
+  background-color: #fcccae;
+  margin-top: 20px;
+}/*# sourceMappingURL=main.css.map */
